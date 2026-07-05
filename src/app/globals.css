@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+@layer base {
+  :root {
+    --bg-color: #080a12;
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-color: #8b5cf6;
+    --accent-glow: rgba(139, 92, 246, 0.4);
+    --highlight-color: #38bdf8;
+    --warm-amber: #fbbf24;
+    --card-bg: rgba(15, 23, 42, 0.75);
+    --card-border: rgba(255, 255, 255, 0.12);
+    --card-blur: blur(24px);
+    --card-radius: 24px;
+    --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  }
+
+  body.theme-brutalist {
+    --bg-color: #0f172a;
+    --text-color: #ffffff;
+    --text-muted: #cbd5e1;
+    --accent-color: #ff007f;
+    --accent-glow: rgba(255, 0, 127, 0.4);
+    --highlight-color: #00f0ff;
+    --card-bg: rgba(0, 0, 0, 0.88);
+    --card-border: #ff007f;
+    --card-blur: none;
+    --card-radius: 4px;
+    --card-shadow: 6px 6px 0px #ff007f;
+  }
+
+  body.theme-pastel {
+    --bg-color: #1a1625;
+    --text-color: #fef08a;
+    --text-muted: #e2e8f0;
+    --accent-color: #f472b6;
+    --accent-glow: rgba(244, 114, 182, 0.4);
+    --highlight-color: #38bdf8;
+    --card-bg: rgba(45, 35, 66, 0.75);
+    --card-border: rgba(244, 114, 182, 0.25);
+    --card-blur: blur(16px);
+    --card-radius: 30px;
+    --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  }
+
+  body {
+    @apply bg-[var(--bg-color)] text-[var(--text-color)] font-body transition-colors duration-500 overflow-x-hidden;
+  }
+}
