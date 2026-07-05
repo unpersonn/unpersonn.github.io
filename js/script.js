@@ -204,29 +204,29 @@ const PLAYLIST = [
     id: 'k',
     title: "K.",
     artist: "Cigarettes After Sex",
-    cover: "K. - Cigarettes After Sex.jpeg",
-    audioSrc: "K. - Cigarettes After Sex.mp3"
+    cover: "assets/images/K. - Cigarettes After Sex.jpeg",
+    audioSrc: "assets/audio/K. - Cigarettes After Sex.mp3"
   },
   {
     id: 'her',
     title: "her",
     artist: "JVKE",
-    cover: "her - JVKE.jpeg",
-    audioSrc: "her - JVKE.mp3"
+    cover: "assets/images/her - JVKE.jpeg",
+    audioSrc: "assets/audio/her - JVKE.mp3"
   },
   {
     id: 'sayoko',
     title: "Sayoko",
     artist: "ryoko",
-    cover: "Sayoko - ryoko.jpeg",
-    audioSrc: "Sayoko - ryoko.mp3"
+    cover: "assets/images/Sayoko - ryoko.jpeg",
+    audioSrc: "assets/audio/Sayoko - ryoko.mp3"
   },
   {
     id: '3d',
     title: "3D (feat. Jack Harlow)",
     artist: "Jung Kook",
-    cover: "3D - Jung Kook.jpeg",
-    audioSrc: "3D - Jung Kook.mp3"
+    cover: "assets/images/3D - Jung Kook.jpeg",
+    audioSrc: "assets/audio/3D - Jung Kook.mp3"
   }
 ];
 
