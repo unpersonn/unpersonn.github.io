@@ -3,7 +3,10 @@
 import React from "react";
 import BackgroundScene from "@/components/3d/BackgroundScene";
 import Hero from "@/components/sections/Hero";
+import AboutChapter from "@/components/sections/AboutChapter";
 import MusicChapter from "@/components/sections/MusicChapter";
+import GamesChapter from "@/components/sections/GamesChapter";
+import ConnectChapter from "@/components/sections/ConnectChapter";
 
 export default function Home() {
   return (
@@ -20,10 +23,25 @@ export default function Home() {
           <div className="w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
         </div>
 
+        <AboutChapter />
+        
+        <div className="w-full flex justify-center py-10 opacity-30">
+          <div className="w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
+        </div>
+
         <MusicChapter />
         
-        {/* More chapters can be added here in the future */}
-        <div className="w-full h-40"></div>
+        <div className="w-full flex justify-center py-10 opacity-30">
+          <div className="w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
+        </div>
+
+        <GamesChapter />
+
+        <div className="w-full flex justify-center py-10 opacity-30">
+          <div className="w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
+        </div>
+
+        <ConnectChapter />
       </div>
     </main>
   );

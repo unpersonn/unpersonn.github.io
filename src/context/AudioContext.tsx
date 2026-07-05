@@ -62,6 +62,11 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     audioRef.current = new Audio(PLAYLIST[currentTrackIdx].audioSrc);
     audioRef.current.addEventListener("ended", nextTrack);
 
+    // Attempt to auto-play on initial load
+    audioRef.current.play()
+      .then(() => setIsPlaying(true))
+      .catch(() => setIsPlaying(false)); // Browser blocked autoplay
+
     return () => {
       if (audioRef.current) {
         audioRef.current.pause();

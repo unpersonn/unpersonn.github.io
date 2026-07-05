@@ -17,7 +17,7 @@ export default function MusicChapter() {
           className="mb-12"
         >
           <span className="text-[var(--accent-color)] font-display font-bold tracking-widest text-sm uppercase mb-2 block">
-            Chapter 01
+            Chapter 02
           </span>
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Soundtrack of My Life
