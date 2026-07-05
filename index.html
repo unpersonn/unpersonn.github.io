@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unperson (aka Yash Patel) — Cozy Journey</title>
+  <meta name="description" content="Hey, I am Unperson (aka Yash Patel). An interactive cozy storytelling personal website.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body class="theme-glass">
+  <!-- Interactive 3D Ambient WebGL Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Navigation & Theme Control -->
+  <header class="cozy-header">
+    <div class="header-brand">
+      <span class="brand-sparkle">✨</span>
+      <span class="brand-name">Unperson</span>
+    </div>
+    <div class="header-right">
+      <!-- Music Quick Banner -->
+      <button class="cozy-music-prompt" id="music-prompt-btn" title="Toggle Cozy Music">
+        <i data-lucide="music"></i>
+        <span id="music-prompt-text">Click anywhere for cozy music</span>
+      </button>
+
+      <!-- Theme Controls -->
+      <div class="theme-selector-container">
+        <button class="theme-btn active" data-theme="glass" title="Cozy Glow">
+          <i data-lucide="sparkles"></i> Glow
+        </button>
+        <button class="theme-btn" data-theme="brutalist" title="Cyberpunk">
+          <i data-lucide="terminal"></i> Cyber
+        </button>
+        <button class="theme-btn" data-theme="pastel" title="Dreamy Pastel">
+          <i data-lucide="palette"></i> Dream
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Side Chapter Navigation Dots -->
+  <nav class="side-chapter-nav" id="chapter-nav">
+    <button class="nav-dot active" data-target="#chapter-intro" title="Intro"><span class="dot-label">Intro</span></button>
+    <button class="nav-dot" data-target="#chapter-about" title="About"><span class="dot-label">About</span></button>
+    <button class="nav-dot" data-target="#chapter-music" title="Music"><span class="dot-label">Music</span></button>
+    <button class="nav-dot" data-target="#chapter-games" title="Games"><span class="dot-label">Games</span></button>
+    <button class="nav-dot" data-target="#chapter-connect" title="Connect"><span class="dot-label">Connect</span></button>
+  </nav>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="zoom-progress-bar" id="zoom-progress-bar"></div>
+
+  <!-- Story Sections Container (Native Scroll & Parallax Zoom) -->
+  <main class="story-container">
+
+    <!-- CHAPTER 1: THE INTRO -->
+    <section class="story-chapter" id="chapter-intro">
+      <div class="chapter-content reveal-up">
+        <div class="cozy-hero-card">
+          <div class="hero-avatar-wrapper">
+            <img src="avatar.png?v=3" alt="Yash Patel (Unperson)" class="hero-avatar">
+            <span class="pulse-status">online & creating</span>
+          </div>
+          <span class="cozy-greeting">WELCOME TO MY SANCTUARY</span>
+          <h1 class="hero-main-title">Hey, I am <span class="highlight-name">Unperson</span></h1>
+          <p class="hero-alias">(aka <span class="patel-name">Yash Patel</span>)</p>
+          <p class="hero-lead">Developer, Alchemist & Digital Explorer crafting cozy, aesthetic & interactive web experiences.</p>
+          
+          <div class="scroll-instruction">
+            <div class="mouse-icon"></div>
+            <span>Scroll down or drag to zoom into my story</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 2: WHO I AM -->
+    <section class="story-chapter" id="chapter-about">
+      <div class="chapter-content reveal-up">
+        <span class="chapter-number">CHAPTER 01</span>
+        <h2 class="chapter-title">The Craft & Mindset</h2>
+        <div class="cozy-card">
+          <p class="story-paragraph">
+            I believe web design should feel like entering a cozy room on a rainy night—warm, expressive, and full of wonder. 
+          </p>
+          <p class="story-paragraph">
+            I spend my time experimenting with interactive canvas animations, building web tools, solving complex bugs, and crafting digital spaces that inspire.
+          </p>
+          <div class="badges-row">
+            <span class="tech-badge"><i data-lucide="code-2"></i> JS & Web Alchemist</span>
+            <span class="tech-badge"><i data-lucide="cpu"></i> Interactive Canvas</span>
+            <span class="tech-badge"><i data-lucide="layout"></i> UI/UX Designer</span>
+            <span class="tech-badge"><i data-lucide="gamepad-2"></i> Retro Gaming Fanatic</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 3: SOUNDTRACK OF MY LIFE -->
+    <section class="story-chapter" id="chapter-music">
+      <div class="chapter-content reveal-up">
+        <span class="chapter-number">CHAPTER 02</span>
+        <h2 class="chapter-title">Soundtrack of My Life</h2>
+        <p class="chapter-subtitle">The 4 songs that accompany my midnight code sessions & creative flow.</p>
+        
+        <div class="song-cards-grid">
+          <div class="cozy-song-card" data-index="0">
+            <img src="K. - Cigarettes After Sex.jpeg" alt="K. Cover" class="song-card-cover">
+            <div class="song-card-meta">
+              <span class="song-card-title">K.</span>
+              <span class="song-card-artist">Cigarettes After Sex</span>
+            </div>
+            <button class="song-card-play-btn" title="Play Track"><i data-lucide="play"></i></button>
+          </div>
+
+          <div class="cozy-song-card" data-index="1">
+            <img src="her - JVKE.jpeg" alt="her Cover" class="song-card-cover">
+            <div class="song-card-meta">
+              <span class="song-card-title">her</span>
+              <span class="song-card-artist">JVKE</span>
+            </div>
+            <button class="song-card-play-btn" title="Play Track"><i data-lucide="play"></i></button>
+          </div>
+
+          <div class="cozy-song-card" data-index="2">
+            <img src="Sayoko - ryoko.jpeg" alt="Sayoko Cover" class="song-card-cover">
+            <div class="song-card-meta">
+              <span class="song-card-title">Sayoko</span>
+              <span class="song-card-artist">ryoko</span>
+            </div>
+            <button class="song-card-play-btn" title="Play Track"><i data-lucide="play"></i></button>
+          </div>
+
+          <div class="cozy-song-card" data-index="3">
+            <img src="3D - Jung Kook.jpeg" alt="3D Cover" class="song-card-cover">
+            <div class="song-card-meta">
+              <span class="song-card-title">3D (feat. Jack Harlow)</span>
+              <span class="song-card-artist">Jung Kook</span>
+            </div>
+            <button class="song-card-play-btn" title="Play Track"><i data-lucide="play"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 4: WORLDS I GET LOST IN -->
+    <section class="story-chapter" id="chapter-games">
+      <div class="chapter-content reveal-up">
+        <span class="chapter-number">CHAPTER 03</span>
+        <h2 class="chapter-title">Worlds I Get Lost In</h2>
+        <p class="chapter-subtitle">Favorite video games that inspire my imagination and storytelling.</p>
+        
+        <div class="games-showcase-grid">
+          <div class="game-vibe-card" style="--game-theme: #ff416c;">
+            <span class="game-rank">01</span>
+            <div class="game-meta">
+              <h3 class="game-name">Elden Ring</h3>
+              <span class="game-genre">Action RPG • FromSoftware</span>
+            </div>
+          </div>
+
+          <div class="game-vibe-card" style="--game-theme: #00d2d3;">
+            <span class="game-rank">02</span>
+            <div class="game-meta">
+              <h3 class="game-name">Zelda: Tears of the Kingdom</h3>
+              <span class="game-genre">Open World • Nintendo</span>
+            </div>
+          </div>
+
+          <div class="game-vibe-card" style="--game-theme: #feca57;">
+            <span class="game-rank">03</span>
+            <div class="game-meta">
+              <h3 class="game-name">Cyberpunk 2077</h3>
+              <span class="game-genre">Sci-Fi RPG • CD Projekt Red</span>
+            </div>
+          </div>
+
+          <div class="game-vibe-card" style="--game-theme: #a855f7;">
+            <span class="game-rank">04</span>
+            <div class="game-meta">
+              <h3 class="game-name">Hollow Knight</h3>
+              <span class="game-genre">Metroidvania • Team Cherry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 5: CONNECT -->
+    <section class="story-chapter" id="chapter-connect">
+      <div class="chapter-content reveal-up">
+        <span class="chapter-number">CHAPTER 04</span>
+        <h2 class="chapter-title">Let's Connect</h2>
+        <p class="chapter-subtitle">Have a cool idea or just want to chat? Reach out to me directly!</p>
+        
+        <div class="cozy-connect-duo">
+          <a href="https://discord.com/users/unpersonn" target="_blank" class="connect-card-btn discord">
+            <div class="connect-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            </div>
+            <div class="connect-info">
+              <span class="platform-title">Discord</span>
+              <span class="platform-handle">@unpersonn</span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/unpersoned/" target="_blank" class="connect-card-btn instagram">
+            <div class="connect-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </div>
+            <div class="connect-info">
+              <span class="platform-title">Instagram</span>
+              <span class="platform-handle">@unpersoned</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="story-footer-note">
+          <span>Made with ❤️ & cozy vibes by Unperson (Yash Patel)</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Persistent Floating Cozy Music Player (Fixed Corner Widget) -->
+  <div class="cozy-player-widget" id="cozy-player-widget">
+    <div class="player-thumb-wrapper">
+      <img src="K. - Cigarettes After Sex.jpeg" alt="Now Playing Cover" class="player-widget-cover" id="widget-cover">
+      <div class="playing-bars" id="widget-equalizer">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="player-widget-info">
+      <span class="widget-track-title" id="widget-track-title">K.</span>
+      <span class="widget-track-artist" id="widget-track-artist">Cigarettes After Sex</span>
+    </div>
+    <div class="player-widget-actions">
+      <button class="widget-btn" id="widget-btn-prev" title="Previous Track"><i data-lucide="skip-back"></i></button>
+      <button class="widget-btn play-main" id="widget-btn-play" title="Play/Pause"><i data-lucide="play" id="widget-play-icon"></i></button>
+      <button class="widget-btn" id="widget-btn-next" title="Next Track"><i data-lucide="skip-forward"></i></button>
+      <button class="widget-btn" id="widget-btn-shuffle" title="Surprise Random Song"><i data-lucide="shuffle"></i></button>
+    </div>
+  </div>
+
+  <script src="script.js?v=5"></script>
+</body>
+</html>
