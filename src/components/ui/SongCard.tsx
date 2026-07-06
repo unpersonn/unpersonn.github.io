@@ -32,14 +32,14 @@ export default function SongCard({ index, title, artist, cover }: SongCardProps)
       whileHover={{ scale: 1.05, y: -5 }}
       whileTap={{ scale: 0.95 }}
       className={clsx(
-        "relative flex flex-col p-4 rounded-[var(--card-radius)] backdrop-blur-[var(--card-blur)] border transition-all duration-300 cursor-pointer overflow-hidden group",
+        "relative flex flex-row sm:flex-col items-center sm:items-stretch p-4 rounded-[var(--card-radius)] backdrop-blur-[var(--card-blur)] border transition-all duration-300 cursor-pointer overflow-hidden group",
         isThisSelected
           ? "bg-[var(--card-bg)] border-[var(--accent-color)] shadow-[0_10px_30px_var(--accent-glow)]"
           : "bg-[var(--card-bg)] border-[var(--card-border)] shadow-[var(--card-shadow)] hover:border-white/30"
       )}
       onClick={handleClick}
     >
-      <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4 border border-white/10">
+      <div className="relative w-20 h-20 sm:w-full sm:aspect-square rounded-xl overflow-hidden mb-0 sm:mb-4 mr-4 sm:mr-0 flex-shrink-0 border border-white/10">
         <img src={cover} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
         
         <div className={clsx(
@@ -52,7 +52,7 @@ export default function SongCard({ index, title, artist, cover }: SongCardProps)
         </div>
       </div>
 
-      <div className="flex flex-col z-10">
+      <div className="flex flex-col z-10 flex-grow min-w-0">
         <span className={clsx("font-display font-bold text-lg truncate transition-colors", isThisSelected ? "text-[var(--accent-color)]" : "text-white")}>
           {title}
         </span>

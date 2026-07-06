@@ -4,6 +4,7 @@ import "./globals.css";
 import { AudioProvider } from "@/context/AudioContext";
 import Header from "@/components/layout/Header";
 import AudioPlayerWidget from "@/components/layout/AudioPlayerWidget";
+import AnimeCompanion from "@/components/ui/AnimeCompanion";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-body" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${outfit.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable} antialiased theme-glass`}>
         <AudioProvider>
+          <AnimeCompanion />
           <Header />
           {children}
           <AudioPlayerWidget />

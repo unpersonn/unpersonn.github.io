@@ -14,7 +14,7 @@ export default function Hero() {
         className="max-w-4xl mx-auto flex flex-col items-center text-center z-10"
       >
         <div className="relative mb-6">
-          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[var(--accent-color)] shadow-[0_0_30px_var(--accent-glow)]">
+          <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[var(--accent-color)] shadow-[0_0_30px_var(--accent-glow)]">
             {/* Note: since avatar.png is in public/assets/images/, we reference it from root */}
             <img src="/assets/images/avatar.png" alt="Yash Patel (Unperson)" className="w-full h-full object-cover" />
           </div>
@@ -27,7 +27,7 @@ export default function Hero() {
           Welcome to my sanctuary
         </span>
         
-        <h1 className="text-5xl md:text-7xl font-display font-bold mb-2">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-2">
           Hey, I am <span className="bg-clip-text text-transparent bg-gradient-to-r from-[var(--highlight-color)] to-[var(--accent-color)]">Unperson</span>
         </h1>
         
@@ -35,7 +35,7 @@ export default function Hero() {
           (aka Yash Patel)
         </p>
         
-        <p className="text-lg md:text-xl max-w-2xl text-gray-300 mb-16 leading-relaxed">
+        <p className="text-lg md:text-xl max-w-2xl text-gray-300 mb-12 sm:mb-16 leading-relaxed">
           Developer, Alchemist & Digital Explorer crafting cozy, aesthetic & interactive web experiences.
         </p>
         
