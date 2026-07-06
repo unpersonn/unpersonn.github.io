@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 const GAMES = [
   { id: 1, name: "Elden Ring", genre: "Action RPG • FromSoftware", color: "#ff416c" },
-  { id: 2, name: "Zelda: Tears of the Kingdom", genre: "Open World • Nintendo", color: "#00d2d3" },
-  { id: 3, name: "Cyberpunk 2077", genre: "Sci-Fi RPG • CD Projekt Red", color: "#feca57" },
-  { id: 4, name: "Hollow Knight", genre: "Metroidvania • Team Cherry", color: "#a855f7" }
+  { id: 2, name: "The Last of Us", genre: "Action-Adventure • Naughty Dog", color: "#10b981" },
+  { id: 3, name: "Resident Evil", genre: "Survival Horror • Capcom", color: "#ef4444" },
+  { id: 4, name: "Minecraft", genre: "Sandbox • Mojang Studios", color: "#22c55e" }
 ];
 
 export default function GamesChapter() {
