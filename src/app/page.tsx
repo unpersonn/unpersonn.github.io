@@ -19,25 +19,25 @@ export default function Home() {
         <Hero />
         
         {/* Decorative Divider */}
-        <div className="w-full flex justify-center py-10 opacity-30">
+        <div className="w-full flex justify-center py-4 sm:py-10 opacity-30">
           <div className="w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
         </div>
 
         <AboutChapter />
         
-        <div className="w-full flex justify-center py-10 opacity-30">
+        <div className="w-full flex justify-center py-4 sm:py-10 opacity-30">
           <div className="w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
         </div>
 
         <MusicChapter />
         
-        <div className="w-full flex justify-center py-10 opacity-30">
+        <div className="w-full flex justify-center py-4 sm:py-10 opacity-30">
           <div className="w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
         </div>
 
         <GamesChapter />
 
-        <div className="w-full flex justify-center py-10 opacity-30">
+        <div className="w-full flex justify-center py-4 sm:py-10 opacity-30">
           <div className="w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
         </div>
 
