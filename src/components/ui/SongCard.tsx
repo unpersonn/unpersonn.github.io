@@ -32,10 +32,10 @@ export default function SongCard({ index, title, artist, cover }: SongCardProps)
       whileHover={{ scale: 1.03, y: -3 }}
       whileTap={{ scale: 0.97 }}
       className={clsx(
-        "relative flex flex-row sm:flex-col items-center sm:items-stretch p-2.5 sm:p-4 rounded-xl sm:rounded-[var(--card-radius)] backdrop-blur-[var(--card-blur)] border transition-all duration-300 cursor-pointer overflow-hidden group",
+        "relative flex flex-row sm:flex-col items-center sm:items-stretch p-2.5 sm:p-4 rounded-xl sm:rounded-[var(--card-radius)] backdrop-blur-none sm:backdrop-blur-[var(--card-blur)] border transition-all duration-300 cursor-pointer overflow-hidden group",
         isThisSelected
-          ? "bg-[var(--card-bg)] border-[var(--accent-color)] shadow-[0_10px_30px_var(--accent-glow)]"
-          : "bg-[var(--card-bg)] border-[var(--card-border)] shadow-[var(--card-shadow)] hover:border-white/30"
+          ? "bg-[#0e1424] sm:bg-[var(--card-bg)] border-[var(--accent-color)] shadow-[0_10px_30px_var(--accent-glow)]"
+          : "bg-[#0e1424] sm:bg-[var(--card-bg)] border-[var(--card-border)] shadow-[var(--card-shadow)] hover:border-white/30"
       )}
       onClick={handleClick}
     >

@@ -40,7 +40,7 @@ export default function GamesChapter() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative overflow-hidden bg-[var(--card-bg)] border border-white/5 backdrop-blur-[var(--card-blur)] rounded-xl sm:rounded-2xl p-5 sm:p-8 hover:-translate-y-1.5 transition-transform duration-300 group"
+              className="relative overflow-hidden bg-[#0e1424] sm:bg-[var(--card-bg)] border border-white/5 backdrop-blur-none sm:backdrop-blur-[var(--card-blur)] rounded-xl sm:rounded-2xl p-5 sm:p-8 hover:-translate-y-1.5 transition-transform duration-300 group"
               style={{ borderLeft: `4px solid ${game.color}` }}
             >
               <div className="absolute top-0 right-0 p-4 sm:p-8 opacity-10 font-display font-bold text-5xl sm:text-8xl transition-transform duration-500 group-hover:scale-110 group-hover:opacity-20 pointer-events-none select-none" style={{ color: game.color }}>

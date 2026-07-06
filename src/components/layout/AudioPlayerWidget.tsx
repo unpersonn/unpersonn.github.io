@@ -10,7 +10,7 @@ export default function AudioPlayerWidget() {
   const track = PLAYLIST[currentTrackIdx];
 
   return (
-    <div className="fixed bottom-3 left-3 right-3 sm:left-auto sm:bottom-6 sm:right-6 flex items-center bg-[var(--card-bg)] border border-[var(--card-border)] backdrop-blur-[var(--card-blur)] rounded-xl sm:rounded-2xl p-2 sm:p-3 shadow-[var(--card-shadow)] z-50 transition-all duration-300 sm:w-80">
+    <div className="fixed bottom-3 left-3 right-3 sm:left-auto sm:bottom-6 sm:right-6 flex items-center bg-[#0e1424] sm:bg-[var(--card-bg)] border border-[var(--card-border)] backdrop-blur-none sm:backdrop-blur-[var(--card-blur)] rounded-xl sm:rounded-2xl p-2 sm:p-3 shadow-[var(--card-shadow)] z-50 transition-all duration-300 sm:w-80">
       <div className="relative w-10 h-10 sm:w-14 sm:h-14 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
         <img
           src={track.cover}

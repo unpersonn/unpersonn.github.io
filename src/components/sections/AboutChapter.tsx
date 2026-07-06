@@ -39,7 +39,7 @@ export default function AboutChapter() {
             </div>
             
             {/* Editor HUD indicator */}
-            <div className="self-start sm:self-auto flex items-center gap-2 sm:gap-3 bg-black/40 border border-white/10 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-xl backdrop-blur-md text-[10px] sm:text-xs font-mono text-gray-400">
+            <div className="self-start sm:self-auto flex items-center gap-2 sm:gap-3 bg-[#0a0f1d] sm:bg-black/40 border border-white/10 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-xl backdrop-blur-none sm:backdrop-blur-md text-[10px] sm:text-xs font-mono text-gray-400">
               <span className="flex items-center gap-1 text-red-500 font-bold">
                 <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
                 REC
@@ -53,7 +53,7 @@ export default function AboutChapter() {
           </div>
           
           {/* Main Content Card */}
-          <div className="bg-[var(--card-bg)] border border-[var(--card-border)] backdrop-blur-[var(--card-blur)] rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-[var(--card-shadow)] relative overflow-hidden">
+          <div className="bg-[#0b101d] sm:bg-[var(--card-bg)] border border-[var(--card-border)] backdrop-blur-none sm:backdrop-blur-[var(--card-blur)] rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-[var(--card-shadow)] relative overflow-hidden">
             {/* Decorative Editor Playhead background line */}
             <div className="absolute top-0 left-1/4 w-[1px] h-full bg-gradient-to-b from-[var(--accent-color)] via-transparent to-transparent opacity-20 pointer-events-none"></div>
 
