@@ -39,7 +39,7 @@ export default function SongCard({ index, title, artist, cover }: SongCardProps)
       )}
       onClick={handleClick}
     >
-      <div className="relative w-20 h-20 sm:w-full sm:aspect-square rounded-xl overflow-hidden mb-0 sm:mb-4 mr-4 sm:mr-0 flex-shrink-0 border border-white/10">
+      <div className="relative w-20 h-20 sm:w-full sm:h-auto sm:aspect-square rounded-xl overflow-hidden mb-0 sm:mb-4 mr-4 sm:mr-0 flex-shrink-0 border border-white/10">
         <img src={cover} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
         
         <div className={clsx(
