@@ -36,7 +36,7 @@ export default function Hero() {
         </p>
         
         <p className="text-lg md:text-xl max-w-2xl text-gray-300 mb-12 sm:mb-16 leading-relaxed">
-          Developer, Alchemist & Digital Explorer crafting cozy, aesthetic & interactive web experiences.
+          Video Editor, Motion Designer & Visual Storyteller crafting cinematic, engaging & impactful media experiences.
         </p>
         
         <motion.div 
