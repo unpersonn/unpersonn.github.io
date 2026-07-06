@@ -9,7 +9,8 @@ function ParticleSwarm() {
   const ref = useRef<THREE.Points>(null);
   
   const { positions, colors } = useMemo(() => {
-    const particleCount = 4000;
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const particleCount = isMobile ? 1800 : 3500;
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
     const colorObj = new THREE.Color();
@@ -95,9 +96,13 @@ function CameraController() {
 
 export default function BackgroundScene() {
   return (
-    <div className="fixed top-0 left-0 w-full h-full -z-10 bg-transparent pointer-events-none">
-      <Canvas camera={{ position: [0, 0, 10], fov: 75 }}>
-        <fog attach="fog" args={['#000000', 5, 30]} />
+    <div className="fixed inset-0 w-screen h-[100dvh] -z-10 bg-transparent pointer-events-none overflow-hidden">
+      <Canvas 
+        camera={{ position: [0, 0, 10], fov: 75 }}
+        dpr={[1, 1.5]}
+        gl={{ alpha: true, antialias: false, powerPreference: "high-performance" }}
+      >
+        <fog attach="fog" args={['#080a12', 5, 30]} />
         <ParticleSwarm />
         <CameraController />
       </Canvas>
